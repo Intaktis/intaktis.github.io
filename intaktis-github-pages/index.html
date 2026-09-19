@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure Operations Platform | INTAKTIS</title>
+<meta name="description" content="INTAKTIS connects GIS asset data, documentation, and day-to-day infrastructure work in one map-based operational platform.">
+<meta name="keywords" content="infrastructure operations platform, GIS asset management, mapped asset data, infrastructure tasking software, master-planned community operations, golf course operations software, utilities asset management, telecommunications asset tracking">
+<meta name="robots" content="index, follow">
+<meta name="author" content="INTAKTIS">
+<link rel="canonical" href="https://www.intaktis.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="INTAKTIS">
+<meta property="og:title" content="Infrastructure Operations Platform | INTAKTIS">
+<meta property="og:description" content="One source of truth for the infrastructure that keeps places moving. INTAKTIS brings GIS asset data, documentation, and day-to-day work together in one map-based system.">
+<meta property="og:image" content="https://www.intaktis.com/assets/images/hero-golf-asset-overview.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="688">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.intaktis.com/assets/images/hero-golf-asset-overview.webp">
+<meta property="og:url" content="https://www.intaktis.com/">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Infrastructure Operations Platform | INTAKTIS">
+<meta name="twitter:description" content="One source of truth for the infrastructure that keeps places moving.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Crect width='24' height='24' rx='4' fill='%230a0a09'/%3E%3Cpath d='M12 4 5 8v8l7 4 7-4V8z' stroke='%23d9662f' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M5 8l7 4 7-4M12 20V12' stroke='%23d9662f' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<!-- Structured data: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "INTAKTIS",
+  "url": "https://www.intaktis.com/",
+  "description": "INTAKTIS is an infrastructure operations platform that connects mapped assets, supporting information, and operational work in one accessible environment.",
+  "email": "contact@intaktis.com",
+  "sameAs": []
+}
+</script>
+
+<!-- Structured data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "INTAKTIS",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Infrastructure operations platform connecting mapped assets, supporting information, and operational work in one accessible environment.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "offerCount": "3"
+  }
+}
+</script>
+
+<!-- Structured data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is INTAKTIS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "INTAKTIS is an infrastructure operations platform that connects mapped assets, supporting information, and operational work in one accessible environment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is INTAKTIS designed for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "INTAKTIS is designed for organizations that build, operate, or maintain complex physical infrastructure, including large developments, utilities, transportation networks, telecommunications operators, and other asset-intensive environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can INTAKTIS use our existing GIS and map data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Existing GIS and map data can be imported after we review its format and quality. The preparation required depends on the source files and their complexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can INTAKTIS integrate with our existing systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Potential integrations are reviewed during project scoping. What is possible depends on the source system, data format, and required workflow."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg: #0a0a09;
+  --bg-elevated: #121210;
+  --surface: #16160f13;
+  --surface-1: #151512;
+  --surface-2: #1b1b16;
+  --border: #2a2a24;
+  --border-soft: #201f1a;
+  --text: #f2efe6;
+  --text-muted: #aaa69b;
+  --text-dim: #6e6b62;
+  --accent: #d9662f;
+  --accent-bright: #e97c46;
+  --accent-dim: #7a3f21;
+  --accent-wash: rgba(217,102,47,0.10);
+  --green: #7c8a67;
+  --green-dim: #3a4230;
+  --green-wash: rgba(124,138,103,0.12);
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --font-display: "Bahnschrift", "IBM Plex Sans", "Segoe UI Variable", system-ui, sans-serif;
+  --font-body: "Bahnschrift", "IBM Plex Sans", "Segoe UI Variable", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+  --container: 1280px;
+  --ease: cubic-bezier(.16,.8,.24,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+input{font-family:inherit;}
+ul{list-style:none;}
+.container{max-width:var(--container);margin:0 auto;padding:0 40px;}
+@media (max-width:900px){.container{padding:0 24px;}}
+
+::selection{background:var(--accent); color:#0a0a09;}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+/* ============ UTILITY ============ */
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:22px;
+}
+.eyebrow::before{
+  content:"";
+  width:16px;height:1px;
+  background:var(--accent);
+  display:inline-block;
+}
+.section{
+  padding:132px 0;
+  position:relative;
+  border-top:1px solid var(--border-soft);
+}
+@media (max-width:900px){.section{padding:76px 0;}}
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:600;
+  letter-spacing:-0.02em;
+  color:var(--text);
+  line-height:1.08;
+}
+h2{font-size:clamp(2rem,3.6vw,3.15rem); letter-spacing:-0.025em;}
+h3{font-size:clamp(1.2rem,2vw,1.5rem);}
+p{color:var(--text-muted);}
+.lede{font-size:clamp(1.05rem,1.4vw,1.3rem); line-height:1.55; color:var(--text-muted); max-width:640px;}
+.section-head{max-width:760px; margin-bottom:64px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head.center .eyebrow{justify-content:center;}
+.section-head.center .eyebrow::before{display:none;}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--font-mono);
+  font-size:13px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  padding:15px 26px;
+  border-radius:var(--radius-sm);
+  border:1px solid transparent;
+  transition:all .25s var(--ease);
+  white-space:nowrap;
+  background:none;
+  cursor:pointer;
+  -webkit-appearance:none;
+  appearance:none;
+  margin:0;
+}
+.btn-primary{background:var(--accent); color:#0a0a09; font-weight:600;}
+.btn-primary:hover{background:var(--accent-bright); transform:translateY(-1px); box-shadow:0 8px 24px -8px rgba(217,102,47,0.5);}
+.btn-ghost{border-color:var(--border); color:var(--text);}
+.btn-ghost:hover{border-color:var(--text-dim); background:var(--surface-1);}
+.btn svg{width:15px;height:15px;flex-shrink:0;}
+
+/* Book a Demo — native dropdown, no JS beyond a single submit handler */
+.demo-dropdown{position:relative; display:inline-block; z-index:20;}
+.demo-dropdown summary{list-style:none; -webkit-appearance:none;}
+.demo-dropdown summary::-webkit-details-marker{display:none;}
+.demo-dropdown summary svg.chev{width:11px; height:11px; margin-left:2px; transition:transform .25s;}
+.demo-dropdown[open] summary svg.chev{transform:rotate(180deg);}
+.demo-dropdown-panel{
+  position:absolute; top:calc(100% + 8px); left:0; width:260px; z-index:100;
+  background:var(--bg-elevated); border:1px solid var(--border); border-radius:4px;
+  padding:16px; box-shadow:0 16px 40px -12px rgba(0,0,0,0.5);
+}
+.demo-dropdown.pull-right .demo-dropdown-panel{left:auto; right:0;}
+.demo-form{display:flex; flex-direction:column; gap:10px;}
+.demo-form input, .demo-form textarea{
+  width:100%; background:var(--surface-1); border:1px solid var(--border); border-radius:3px;
+  padding:10px 11px; font-family:var(--font-body); font-size:13px; color:var(--text); outline:none;
+}
+.demo-form textarea{resize:vertical; min-height:56px;}
+.demo-form input::placeholder, .demo-form textarea::placeholder{color:var(--text-dim);}
+.demo-form input:focus, .demo-form textarea:focus{border-color:var(--accent);}
+.demo-form button{
+  background:var(--accent); color:#0a0a09; border:none; border-radius:3px; padding:10px;
+  font-family:var(--font-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; font-weight:600;
+  cursor:pointer; transition:background .2s;
+}
+.demo-form button:hover{background:var(--accent-bright);}
+.demo-form.hide{display:none;}
+.demo-form-success{display:none; font-size:13px; color:var(--text-muted); line-height:1.5; margin:0;}
+.demo-form-success.show{display:block;}
+
+/* Contact Sales — guided questions modal */
+.sales-box{
+  width:100%; max-width:480px; max-height:88vh; overflow-y:auto; position:relative;
+  background:var(--bg-elevated); border:1px solid var(--border); border-radius:6px; padding:44px 36px 36px;
+  transform:scale(.96); transition:transform .3s var(--ease);
+}
+.modal-overlay.open .sales-box{transform:scale(1);}
+.sales-step{display:none;}
+.sales-step.active{display:block;}
+.sales-progress{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-dim); margin-bottom:14px;}
+.sales-step h3{font-size:1.25rem; margin-bottom:24px; line-height:1.35;}
+.sales-options{display:flex; flex-direction:column; gap:10px;}
+.sales-opt{
+  text-align:left; background:var(--surface-1); border:1px solid var(--border); border-radius:4px;
+  padding:13px 16px; font-family:var(--font-body); font-size:14px; color:var(--text); cursor:pointer; transition:all .2s;
+}
+.sales-opt:hover{border-color:var(--accent); background:var(--accent-wash); color:var(--accent-bright);}
+.sales-back{display:inline-block; margin-top:20px; font-family:var(--font-mono); font-size:11.5px; color:var(--text-dim); cursor:pointer;}
+.sales-back:hover{color:var(--accent);}
+.sales-form{display:flex; flex-direction:column; gap:10px;}
+.sales-form input, .sales-form textarea{
+  width:100%; background:var(--surface-1); border:1px solid var(--border); border-radius:3px;
+  padding:10px 11px; font-family:var(--font-body); font-size:13px; color:var(--text); outline:none;
+}
+.sales-form textarea{resize:vertical; min-height:70px;}
+.sales-form input::placeholder, .sales-form textarea::placeholder{color:var(--text-dim);}
+.sales-form input:focus, .sales-form textarea:focus{border-color:var(--accent);}
+.sales-form button{
+  background:var(--accent); color:#0a0a09; border:none; border-radius:3px; padding:12px;
+  font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:600;
+  cursor:pointer; transition:background .2s;
+}
+.sales-form button:hover{background:var(--accent-bright);}
+.sales-form.hide{display:none;}
+.sales-form-success{display:none; font-size:14px; color:var(--text-muted); line-height:1.6;}
+.sales-form-success.show{display:block;}
+
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+/* corner-bracket / surveyor motif — signature element */
+.reticle{position:relative;}
+.reticle::before,.reticle::after,.reticle .rt-tr,.reticle .rt-bl{
+  content:"";
+  position:absolute;
+  width:14px;height:14px;
+  border-color:var(--border);
+  border-style:solid;
+  opacity:.9;
+  pointer-events:none;
+}
+.reticle::before{top:-1px;left:-1px;border-width:1px 0 0 1px;}
+.reticle::after{bottom:-1px;right:-1px;border-width:0 1px 1px 0;}
+.reticle .rt-tr{top:-1px;right:-1px;border-width:1px 1px 0 0;}
+.reticle .rt-bl{bottom:-1px;left:-1px;border-width:0 0 1px 1px;}
+.reticle:hover::before,.reticle:hover::after,.reticle:hover .rt-tr,.reticle:hover .rt-bl{border-color:var(--accent);}
+
+.geotag{
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  letter-spacing:.05em;
+  color:var(--text-dim);
+}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  border-bottom:1px solid transparent;
+  transition:all .3s var(--ease);
+}
+.nav.scrolled{
+  background:rgba(10,10,9,0.86);
+  backdrop-filter:blur(14px);
+  border-bottom-color:var(--border-soft);
+}
+.nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  height:76px;
+}
+.logo{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:19px;
+  letter-spacing:0.02em;
+  display:flex;align-items:center;gap:9px;
+}
+.logo-img{height:20px; width:auto; display:block;}
+.nav-links{display:flex; gap:38px; align-items:center;}
+.nav-links a{
+  font-size:13.5px; color:var(--text-muted);
+  transition:color .2s;
+  position:relative;
+}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{display:flex; align-items:center; gap:18px;}
+.nav-toggle{display:none; width:22px; height:16px; position:relative; background:none; border:none;}
+.nav-toggle span{position:absolute; left:0; width:100%; height:1px; background:var(--text); transition:all .3s var(--ease);}
+.nav-toggle span:nth-child(1){top:0;}
+.nav-toggle span:nth-child(2){top:7px;}
+.nav-toggle span:nth-child(3){top:14px;}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.mobile-menu{
+  position:fixed; inset:76px 0 0 0; background:var(--bg);
+  z-index:190; transform:translateX(100%); transition:transform .35s var(--ease);
+  overflow-y:auto;
+}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu-inner{padding:40px 24px; display:flex; flex-direction:column; gap:2px;}
+.mobile-menu a{
+  font-family:var(--font-display); font-size:26px; padding:16px 0; border-bottom:1px solid var(--border-soft); color:var(--text);
+}
+.mobile-menu .btn{margin-top:28px; justify-content:center;}
+
+@media (max-width:900px){
+  .nav-links{display:none;}
+  .nav-cta .btn-primary{display:none;}
+  .nav-cta > a.btn-ghost{display:none;}
+  .nav-toggle{display:block;}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  padding:196px 0 100px;
+  overflow:hidden;
+  border-top:none;
+}
+.hero-bg{
+  position:absolute; inset:0; z-index:0; opacity:.55;
+}
+.hero-grid{
+  position:absolute; inset:0; z-index:0;
+  background-image:
+    linear-gradient(to right, var(--border-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-soft) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 70% 55% at 50% 20%, black 10%, transparent 75%);
+}
+.hero-inner{position:relative; z-index:2;}
+.hero-copy{max-width:820px; position:relative; z-index:5;}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem); margin-bottom:26px;}
+.hero .lede{margin-bottom:42px;}
+.hero-actions{display:flex; gap:18px; align-items:center; flex-wrap:wrap; margin-bottom:44px;}
+.hero-stat{display:flex; align-items:baseline; gap:14px; padding-top:28px; border-top:1px solid var(--border-soft); margin-bottom:56px;}
+.hero-stat strong{font-family:var(--font-display); font-size:2.4rem; font-weight:700; color:var(--accent); line-height:1; letter-spacing:-0.02em;}
+.hero-stat span{font-size:13.5px; color:var(--text-muted); max-width:220px; line-height:1.4;}
+
+/* hero product mockup */
+.mockup-wrap{position:relative;}
+.mockup{
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, var(--bg-elevated), var(--bg));
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 60px 120px -40px rgba(0,0,0,0.7);
+}
+.mockup-bar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 20px; border-bottom:1px solid var(--border-soft);
+  font-family:var(--font-mono); font-size:11px; color:var(--text-dim);
+}
+.mockup-dots{display:flex; gap:6px;}
+.mockup-dots span{width:7px;height:7px;border-radius:50%; background:var(--border);}
+.mockup-body{display:grid; grid-template-columns:220px 1fr 260px; min-height:460px;}
+@media (max-width:900px){.mockup-body{grid-template-columns:1fr; min-height:auto;}}
+.mockup-side{border-right:1px solid var(--border-soft); padding:22px 18px;}
+.mockup-side.right{border-right:none; border-left:1px solid var(--border-soft);}
+@media (max-width:900px){.mockup-side{display:none;}}
+.mockup-side-title{font-family:var(--font-mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-dim); margin-bottom:16px;}
+.mockup-row{display:flex; align-items:center; gap:10px; padding:9px 0; font-size:12.5px; color:var(--text-muted); border-bottom:1px solid transparent;}
+.mockup-row .dot{width:6px;height:6px;border-radius:50%;background:var(--green); flex-shrink:0;}
+.mockup-row.active{color:var(--text);}
+.mockup-row.active .dot{background:var(--accent);}
+.mockup-map{position:relative; background:
+  radial-gradient(ellipse at 30% 20%, rgba(124,138,103,0.14), transparent 55%),
+  radial-gradient(ellipse at 75% 70%, rgba(217,102,47,0.08), transparent 50%),
+  var(--bg-elevated);
+  padding:20px;
+}
+.mockup-toolbar{display:flex; gap:8px; margin-bottom:16px;}
+.mockup-chip{font-family:var(--font-mono); font-size:10.5px; padding:6px 11px; border:1px solid var(--border); border-radius:20px; color:var(--text-muted);}
+.mockup-chip.on{border-color:var(--accent); color:var(--accent);}
+.mockup-callout{
+  position:absolute; background:rgba(10,10,9,0.92); border:1px solid var(--border);
+  padding:8px 12px; border-radius:3px; font-family:var(--font-mono); font-size:10.5px; color:var(--text);
+  backdrop-filter:blur(6px);
+}
+.ai-pill{
+  display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:10.5px;
+  padding:8px 12px; border:1px solid var(--accent-dim); background:var(--accent-wash); color:var(--accent-bright);
+  border-radius:20px; margin-top:14px;
+}
+
+/* ===== realistic product UI mockup (matches actual INTAKTIS console) ===== */
+.app-topbar{display:flex; align-items:center; justify-content:space-between; padding:11px 18px; border-bottom:1px solid var(--border-soft); background:#0d0d0b;}
+.app-logo{font-family:var(--font-display); font-weight:700; font-size:15px; letter-spacing:.01em; display:flex; align-items:center; gap:9px;}
+.app-logo .in{font-style:italic; font-weight:400; color:var(--text);}
+.app-logo .taktis{color:var(--accent); font-weight:700;}
+.app-version{font-family:var(--font-mono); font-size:9px; color:var(--text-dim); border:1px solid var(--border); padding:2px 7px; border-radius:10px;}
+.app-top-right{display:flex; align-items:center; gap:16px;}
+.app-top-icon{width:15px;height:15px; color:var(--text-dim); flex-shrink:0;}
+.app-top-chip{font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:flex; align-items:center; gap:6px;}
+.app-avatar{width:24px;height:24px;border-radius:50%; background:linear-gradient(135deg,#d9662f,#b23a7a); display:flex;align-items:center;justify-content:center; font-family:var(--font-mono); font-size:9.5px; color:#fff; font-weight:600; flex-shrink:0;}
+.app-user{font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:none;}
+@media (min-width:700px){.app-user{display:inline;}}
+
+.app-body{display:grid; grid-template-columns:224px 1fr; min-height:480px; position:relative;}
+@media (max-width:900px){.app-body{grid-template-columns:1fr;} .app-sidebar{display:none;} .app-create-menu{display:none;}}
+.app-create-menu{position:absolute; top:64px; left:236px; z-index:6; display:flex; gap:6px; align-items:flex-start;}
+.app-menu-col{background:#19190f; border:1px solid var(--border); border-radius:4px; padding:6px; min-width:118px; box-shadow:0 24px 48px -12px rgba(0,0,0,0.7);}
+.app-menu-item{display:flex; align-items:center; gap:8px; padding:7px 9px; font-family:var(--font-mono); font-size:10.5px; color:var(--text-muted); border-radius:3px; white-space:nowrap;}
+.app-menu-item svg{width:12px;height:12px; color:var(--text-dim); flex-shrink:0;}
+.app-menu-item.active{background:var(--surface-2); color:var(--text);}
+.app-menu-item.active svg{color:var(--accent);}
+.app-sidebar{border-right:1px solid var(--border-soft); padding:16px; background:var(--bg-elevated); display:flex; flex-direction:column; gap:12px;}
+.app-project-select{display:flex; align-items:center; justify-content:space-between; border:1px solid var(--border); padding:8px 10px; border-radius:3px; font-size:11.5px; color:var(--text);}
+.app-project-select svg{width:11px;height:11px; color:var(--text-dim);}
+.app-row-btns{display:flex; gap:8px;}
+.app-btn-ghost-sm{flex:1; border:1px solid var(--border); border-radius:3px; padding:7px 0; text-align:center; font-family:var(--font-mono); font-size:10px; color:var(--text-muted); display:flex; align-items:center; justify-content:center; gap:5px;}
+.app-btn-ghost-sm svg{width:10px;height:10px;}
+.app-btn-solid-sm{flex:1.4; border-radius:3px; padding:7px 0; text-align:center; font-family:var(--font-mono); font-size:10px; background:var(--accent); color:#0a0a09; font-weight:600; display:flex; align-items:center; justify-content:center; gap:5px;}
+.app-btn-solid-sm svg{width:10px;height:10px;}
+.app-search{border:1px solid var(--border); border-radius:3px; padding:7px 10px; font-family:var(--font-mono); font-size:10px; color:var(--text-dim);}
+.app-total{font-family:var(--font-mono); font-size:10px; color:var(--text-dim);}
+.app-tree{display:flex; flex-direction:column; gap:2px; overflow:hidden;}
+.app-tree-item{display:flex; align-items:center; gap:8px; padding:5px 2px; font-size:11.5px; color:var(--text-muted); white-space:nowrap;}
+.app-tree-item svg{width:12px;height:12px; flex-shrink:0; color:var(--text-dim);}
+.app-tree-item .cnt{margin-left:auto; font-family:var(--font-mono); font-size:9px; color:var(--text-dim); padding-left:6px;}
+.app-tree-item.visible svg.eye{color:var(--accent);}
+.app-tree-item.perimeter{margin-top:8px; padding-top:10px; border-top:1px solid var(--border-soft); color:var(--text);}
+.app-tree-item.perimeter .dot{width:8px;height:8px;border-radius:50%; background:#4a90d9; flex-shrink:0;}
+
+.app-map{position:relative; overflow:hidden;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(95,115,60,0.55), transparent 50%),
+    radial-gradient(ellipse at 72% 12%, rgba(75,95,50,0.5), transparent 55%),
+    radial-gradient(ellipse at 38% 58%, rgba(65,85,45,0.45), transparent 60%),
+    radial-gradient(ellipse at 88% 82%, rgba(40,52,58,0.55), transparent 55%),
+    linear-gradient(160deg, #2c3524, #1a2015 55%, #10140d);
+}
+.app-map-svg{position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none;}
+.app-map-search{position:absolute; top:16px; left:50%; transform:translateX(-50%); width:230px; border:1px solid var(--accent-dim); background:rgba(10,10,9,0.85); backdrop-filter:blur(6px); border-radius:4px; padding:8px 12px; font-family:var(--font-mono); font-size:10px; color:var(--text-dim); display:flex; align-items:center; justify-content:space-between; gap:8px;}
+.app-map-search svg{width:11px;height:11px; color:var(--text-dim); flex-shrink:0;}
+.app-map-tools{position:absolute; top:16px; right:16px; display:flex; flex-direction:column; gap:6px;}
+.app-map-tool{width:26px;height:26px;border-radius:3px; background:rgba(10,10,9,0.8); border:1px solid var(--border); display:flex;align-items:center;justify-content:center; color:var(--text-dim);}
+.app-map-tool.active{background:var(--accent); border-color:var(--accent); color:#0a0a09;}
+.app-map-tool svg{width:12px;height:12px;}
+.app-cluster{position:absolute; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-weight:600; color:#fff; box-shadow:0 6px 16px -4px rgba(0,0,0,.6);}
+.app-cluster.lg{width:60px;height:60px; font-size:14px; background:radial-gradient(circle at 35% 30%, #e2672a, #b23e19);}
+.app-cluster.md{width:44px;height:44px; font-size:11.5px; background:radial-gradient(circle at 35% 30%, #e2672a, #b23e19);}
+.app-cluster.sm{width:28px;height:28px; font-size:10px; background:radial-gradient(circle at 35% 30%, #f0cdb8, #d99a6f); color:#3a1f0e;}
+.app-coords{position:absolute; bottom:14px; left:14px; font-family:var(--font-mono); font-size:9.5px; color:rgba(242,239,230,0.7); background:rgba(10,10,9,0.55); padding:5px 10px; border-radius:3px; display:flex; gap:10px;}
+
+/* value prop / fragmentation visual */
+.value-grid{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;}
+@media (max-width:960px){.value-grid{grid-template-columns:1fr; gap:48px;}}
+.diagram-card{margin-top:56px; background:#fdfbf8; border-radius:6px; padding:28px; border:1px solid var(--border-soft);}
+.value-copy p{margin-bottom:18px;}
+.sst-badge{
+  display:inline-flex; flex-direction:column; gap:6px; padding:18px 22px; border:1px solid var(--accent-dim);
+  background:var(--accent-wash); border-radius:2px; max-width:420px;
+}
+.sst-badge span{font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--text-dim);}
+.sst-badge strong{font-family:var(--font-display); font-size:1rem; line-height:1.4; color:var(--accent-bright); font-weight:600;}
+
+.flow-diagram{position:relative; padding:36px; border:1px solid var(--border); border-radius:4px; background:var(--bg-elevated);}
+.flow-sources{display:flex; flex-direction:column; gap:10px; margin-bottom:26px;}
+.flow-source{
+  display:flex; align-items:center; gap:10px; font-family:var(--font-mono); font-size:11.5px; color:var(--text-muted);
+  padding:9px 12px; border:1px solid var(--border-soft); border-radius:2px; position:relative;
+}
+.flow-source svg{width:13px;height:13px; color:var(--text-dim); flex-shrink:0;}
+.flow-line{width:1px; height:26px; background:linear-gradient(var(--border), var(--accent)); margin:0 auto;}
+.flow-target{
+  margin-top:0; text-align:center; padding:22px; border:1px solid var(--accent-dim); background:var(--accent-wash); border-radius:2px;
+}
+.flow-target strong{font-family:var(--font-display); font-size:1.05rem; color:var(--text);}
+.flow-target .geotag{display:block; margin-top:6px;}
+
+/* features */
+.features-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border-soft); border:1px solid var(--border-soft);}
+@media (max-width:1100px){.features-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:600px){.features-grid{grid-template-columns:1fr;}}
+.feature-card{background:var(--bg); padding:0 0 36px; transition:background .3s var(--ease); overflow:hidden;}
+.feature-thumb{width:100%; height:120px; overflow:hidden; border-bottom:1px solid var(--border-soft);}
+.feature-thumb img{width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;}
+.feature-card .feature-num, .feature-card .feature-icon, .feature-card h3, .feature-card p{margin-left:30px; margin-right:30px;}
+.feature-card .feature-num{margin-top:26px;}
+.feature-card:hover{background:var(--bg-elevated);}
+.feature-num{font-family:var(--font-mono); font-size:11px; color:var(--text-dim); margin-bottom:26px; letter-spacing:.1em;}
+.feature-icon{width:38px;height:38px; margin-bottom:22px; color:var(--accent); transition:transform .3s var(--ease);}
+.feature-card:hover .feature-icon{transform:translateY(-3px);}
+.feature-card h3{margin-bottom:12px;}
+.feature-card p{font-size:14.5px;}
+.roadmap-note{
+  margin-top:1px; padding:28px 34px; border:1px dashed var(--border); border-radius:2px;
+  background:var(--bg-elevated);
+}
+.roadmap-tag{font-family:var(--font-mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--text-dim); margin-bottom:12px;}
+.roadmap-note h4{font-size:1.05rem; font-weight:600; color:var(--text); margin-bottom:8px;}
+.roadmap-note p{font-size:14px; color:var(--text-muted); max-width:640px;}
+
+/* product showcase */
+.showcase{position:relative;}
+.showcase-frame{position:relative; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:var(--bg-elevated);}
+
+/* video section */
+.video-section{position:relative;}
+.video-frame{
+  position:relative; aspect-ratio:16/8.2; border-radius:6px; overflow:hidden; border:1px solid var(--border);
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(124,138,103,0.18), transparent 50%),
+    radial-gradient(ellipse at 80% 75%, rgba(217,102,47,0.12), transparent 50%),
+    linear-gradient(135deg, #14140f, #0a0a09);
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.video-frame .geotag{position:absolute; bottom:20px; left:24px;}
+.video-frame .caption-tag{position:absolute; top:20px; right:24px;}
+.video-play{
+  width:84px;height:84px;border-radius:50%; border:1px solid var(--border-soft); background:rgba(10,10,9,0.5); backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center; transition:all .3s var(--ease);
+}
+.video-play svg{width:22px;height:22px; fill:var(--text); margin-left:3px;}
+.video-frame:hover .video-play{background:var(--accent); border-color:var(--accent);}
+.video-frame:hover .video-play svg{fill:#0a0a09;}
+
+/* how it works — connected flow */
+.hiw-steps{position:relative; display:grid; grid-template-columns:repeat(3,1fr); gap:0;}
+@media (max-width:800px){.hiw-steps{grid-template-columns:1fr; gap:36px;}}
+.hiw-track{position:absolute; top:27px; left:16.6667%; right:16.6667%; height:1px; background:linear-gradient(to right, var(--accent-dim), var(--border), var(--accent-dim)); z-index:0;}
+@media (max-width:800px){.hiw-track{display:none;}}
+.hiw-arrow{position:absolute; top:20px; width:14px; height:14px; color:var(--accent); z-index:1; transform:translateX(-50%);}
+@media (max-width:800px){.hiw-arrow{display:none;}}
+.hiw-step{padding:0 28px; position:relative; z-index:2; text-align:center;}
+.hiw-step:first-child{padding-left:0;}
+.hiw-step:last-child{padding-right:0;}
+@media (max-width:800px){.hiw-step{text-align:left; padding:0;}}
+.hiw-node{
+  width:56px; height:56px; border-radius:50%; margin:0 auto 22px;
+  border:1px solid var(--accent-dim); background:var(--accent-wash);
+  display:flex; align-items:center; justify-content:center; position:relative;
+}
+@media (max-width:800px){.hiw-node{margin:0 0 18px;}}
+.hiw-node svg{width:22px; height:22px; color:var(--accent);}
+.hiw-node .hiw-num{
+  position:absolute; top:-6px; right:-6px; width:20px; height:20px; border-radius:50%;
+  background:var(--accent); color:#0a0a09; font-family:var(--font-mono); font-size:10px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+}
+.hiw-step h3{margin-bottom:10px; font-size:1.1rem;}
+.hiw-step p{font-size:14px;}
+
+/* references */
+.ref-card{
+  display:grid; grid-template-columns:1.1fr 1fr; border:1px solid var(--border); margin-bottom:1px; overflow:hidden;
+}
+@media (max-width:900px){.ref-card{grid-template-columns:1fr;}}
+.ref-visual{
+  position:relative; min-height:340px; overflow:hidden;
+  display:flex; align-items:flex-end; padding:26px;
+  background-size:cover; background-position:center;
+}
+.ref-visual img, .usecase-visual img, .news-visual img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; display:block;
+}
+.ref-visual .geotag{position:relative; z-index:2; color:rgba(242,239,230,0.85); text-shadow:0 1px 4px rgba(0,0,0,0.6);}
+.ref-visual-bg{position:absolute; inset:0; z-index:0; background:linear-gradient(to top, rgba(10,10,9,0.75), rgba(10,10,9,0.05) 55%);}
+.ref-body{padding:48px; display:flex; flex-direction:column; justify-content:center;}
+.ref-cat{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:16px;}
+.ref-body h3{font-size:1.55rem; margin-bottom:14px;}
+.ref-desc{font-size:14px; color:var(--text-muted); margin-bottom:22px; line-height:1.6;}
+.poc-label{font-family:var(--font-mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-dim); margin-bottom:10px;}
+.ref-quote{font-size:1.05rem; line-height:1.55; color:var(--text); font-style:normal; margin-bottom:0; border-left:2px solid var(--accent); padding-left:18px;}
+.ref-attribution{font-family:var(--font-mono); font-size:12px; color:var(--text-dim); margin-top:14px; padding-left:18px;}
+.ref-attribution strong{color:var(--text-muted); font-weight:600;}
+
+/* use cases — alternating rows */
+.usecase-row{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding:52px 0; border-bottom:1px solid var(--border-soft);}
+.usecase-row:first-child{padding-top:0;}
+.usecase-row:last-child{border-bottom:none; padding-bottom:0;}
+.usecase-row.reverse .usecase-visual{order:2;}
+.usecase-row.reverse .usecase-copy{order:1;}
+@media (max-width:820px){
+  .usecase-row{grid-template-columns:1fr; gap:24px; padding:36px 0;}
+  .usecase-row.reverse .usecase-visual, .usecase-row.reverse .usecase-copy{order:initial;}
+}
+.usecase-visual{aspect-ratio:16/10; border-radius:4px; overflow:hidden; position:relative; background-size:cover; background-position:center; filter:grayscale(0.25) saturate(0.85) contrast(1.08) brightness(0.94);}
+.usecase-visual::after{content:""; position:absolute; inset:0; background:linear-gradient(155deg, rgba(10,10,9,0.5) 0%, rgba(10,10,9,0.08) 55%, rgba(217,102,47,0.1) 100%); mix-blend-mode:multiply; pointer-events:none;}
+.usecase-visual .icon-wrap{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;}
+.usecase-visual .icon-wrap svg{width:72px; height:72px; opacity:0.16;}
+.usecase-tag{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:14px;}
+.usecase-copy h3{font-size:1.4rem; margin-bottom:16px; font-weight:600;}
+.usecase-copy p{font-size:14.5px; line-height:1.65;}
+
+/* pricing */
+.price-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+@media (max-width:960px){.price-grid{grid-template-columns:1fr; max-width:440px; margin:0 auto;}}
+.price-card{border:1px solid var(--border); padding:38px 32px; display:flex; flex-direction:column; border-radius:4px;}
+.price-card.featured{border-color:var(--accent-dim); background:linear-gradient(180deg, var(--accent-wash), transparent 40%); position:relative;}
+.price-featured-tag{
+  position:absolute; top:-1px; right:24px; transform:translateY(-50%);
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#0a0a09;
+  background:var(--accent); padding:5px 10px; border-radius:2px;
+}
+.price-name{font-family:var(--font-mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-dim); margin-bottom:14px;}
+.price-desc{font-family:var(--font-display); font-size:1.05rem; font-weight:600; color:var(--text); margin-bottom:26px; min-height:42px;}
+.price-list{display:flex; flex-direction:column; gap:13px; flex:1;}
+.price-list li{display:flex; align-items:flex-start; gap:10px; font-size:13.5px; color:var(--text-muted);}
+.price-list li svg{width:13px;height:13px; margin-top:3px; color:var(--accent); flex-shrink:0;}
+.price-cta-row{display:flex; justify-content:center; gap:16px; margin-top:44px; flex-wrap:wrap;}
+
+
+/* news */
+.news-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--border-soft); border:1px solid var(--border-soft);}
+@media (max-width:760px){.news-grid{grid-template-columns:1fr;}}
+.news-card{background:var(--bg); display:flex; flex-direction:column; transition:background .3s;}
+.news-card:hover{background:var(--bg-elevated);}
+.news-visual{aspect-ratio:16/10; position:relative; overflow:hidden; background-size:cover; background-position:center;}
+.news-visual::after{content:""; position:absolute; inset:0; background:linear-gradient(155deg, rgba(10,10,9,0.5) 0%, rgba(10,10,9,0.08) 55%, rgba(217,102,47,0.1) 100%); mix-blend-mode:multiply; pointer-events:none;}
+.news-visual .icon-wrap{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; z-index:1;}
+.news-visual .icon-wrap svg{width:56px; height:56px; opacity:0.18;}
+.news-body{padding:32px 34px 36px;}
+.news-date{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:14px;}
+.news-body h3{font-size:1.15rem; margin-bottom:12px; line-height:1.3;}
+.news-body p{font-size:13.5px; color:var(--text-muted); margin-bottom:18px; line-height:1.6;}
+.news-link{
+  font-family:var(--font-mono); font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent);
+  display:inline-flex; align-items:center; gap:6px; transition:gap .2s, color .2s;
+  background:none; border:none; padding:0; margin:0; cursor:pointer; -webkit-appearance:none; appearance:none;
+}
+.news-link:hover{gap:10px; color:var(--accent-bright);}
+.news-link svg{width:12px; height:12px; transition:transform .3s; flex-shrink:0;}
+.news-card.open .news-link svg{transform:rotate(180deg);}
+.news-more{max-height:0; overflow:hidden; transition:max-height .4s var(--ease);}
+.news-more-inner{padding-top:2px;}
+.news-more-inner p{font-size:13.5px; color:var(--text-muted); margin-bottom:14px; line-height:1.65;}
+.news-more-inner p:last-child{margin-bottom:0;}
+.news-more-inner .pull{color:var(--text); font-weight:600; font-style:normal;}
+.news-more-inner blockquote{border-left:2px solid var(--accent); padding-left:16px; margin-bottom:14px; color:var(--text); font-size:13.5px; line-height:1.65;}
+
+/* faq */
+.faq-list{border-top:1px solid var(--border);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{
+  width:100%; background:none; border:none; color:var(--text); text-align:left;
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  padding:28px 4px; font-family:var(--font-display); font-size:1.05rem; font-weight:600;
+}
+.faq-q .plus{width:18px;height:18px; position:relative; flex-shrink:0;}
+.faq-q .plus::before,.faq-q .plus::after{content:""; position:absolute; background:var(--text-dim); transition:transform .3s var(--ease), background .3s;}
+.faq-q .plus::before{top:50%; left:0; width:100%; height:1px; transform:translateY(-50%);}
+.faq-q .plus::after{left:50%; top:0; height:100%; width:1px; transform:translateX(-50%);}
+.faq-item.open .plus::after{transform:translateX(-50%) rotate(90deg); opacity:0;}
+.faq-item.open .plus::before{background:var(--accent);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .4s var(--ease);}
+.faq-a-inner{padding:0 4px 28px; font-size:14.5px; line-height:1.65; max-width:760px; color:var(--text-muted);}
+
+/* final CTA */
+.final-cta{
+  position:relative; overflow:hidden; text-align:center; padding:150px 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 0%, rgba(217,102,47,0.10), transparent 60%),
+    var(--bg-elevated);
+}
+.final-cta .eyebrow{justify-content:center;}
+.final-cta .eyebrow::before{display:none;}
+.final-cta h2{max-width:780px; margin:0 auto 20px;}
+.final-cta .lede{max-width:520px; margin:0 auto 48px;}
+.final-actions{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+/* footer */
+footer{border-top:1px solid var(--border-soft); padding:80px 0 32px;}
+.footer-grid{display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:40px; margin-bottom:64px;}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr; row-gap:40px;}}
+.footer-brand .logo{margin-bottom:14px;}
+.footer-brand p{font-size:13.5px; max-width:260px;}
+.footer-col-title{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-dim); margin-bottom:18px;}
+.footer-col a, .footer-col p{display:block; font-size:13.5px; color:var(--text-muted); margin-bottom:12px; transition:color .2s;}
+.footer-col a:hover{color:var(--text);}
+.footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:32px; border-top:1px solid var(--border-soft); flex-wrap:wrap; gap:16px;}
+.footer-bottom .copyright{font-size:12.5px; color:var(--text-dim); font-family:var(--font-mono);}
+.social-row{display:flex; gap:14px;}
+.social-row a{width:32px;height:32px; border:1px solid var(--border); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all .2s;}
+.social-row a:hover{border-color:var(--accent); color:var(--accent);}
+.social-row svg{width:14px;height:14px;}
+
+/* video modal */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(10,10,9,0.9); backdrop-filter:blur(6px); z-index:500;
+  display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .3s var(--ease);
+  padding:24px;
+}
+.modal-overlay.open{opacity:1; pointer-events:auto;}
+.modal-box{width:100%; max-width:960px; aspect-ratio:16/9; border:1px solid var(--border); border-radius:6px; position:relative; background:var(--bg-elevated); overflow:hidden;
+  display:flex; align-items:center; justify-content:center; transform:scale(.96); transition:transform .3s var(--ease);}
+.modal-overlay.open .modal-box{transform:scale(1);}
+.modal-close{position:absolute; top:16px; right:16px; width:36px;height:36px; border:1px solid var(--border); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--text); z-index:2;}
+.modal-close:hover{border-color:var(--accent); color:var(--accent);}
+.modal-placeholder{text-align:center; color:var(--text-dim); font-family:var(--font-mono); font-size:13px;}
+.modal-placeholder svg{width:40px;height:40px; margin-bottom:16px; color:var(--text-dim);}
+.modal-video-wrap{width:100%; height:100%;}
+.modal-video-wrap iframe{width:100%; height:100%; border:none; display:block;}
+.modal-video-wrap video{width:100%; height:100%; object-fit:contain; display:block; background:#000;}
+
+/* generic placeholder photo panel */
+.photo-panel{
+  position:relative; overflow:hidden; background:var(--bg-elevated);
+}
+.photo-panel::before{
+  content:""; position:absolute; inset:0;
+  background: repeating-linear-gradient(135deg, transparent, transparent 18px, rgba(255,255,255,0.015) 18px, rgba(255,255,255,0.015) 19px);
+}
+.photo-label{
+  position:absolute; bottom:16px; left:16px; z-index:2;
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:rgba(242,239,230,0.55);
+  border:1px solid rgba(242,239,230,0.2); padding:4px 9px; border-radius:20px; backdrop-filter:blur(4px);
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="logo">
+      <img src="assets/images/logo-mark.png" width="1724" height="429" loading="eager" alt="INTAKTIS" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="#platform">Platform</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#references">References</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://app.intaktis.com" target="_blank" rel="noopener" class="btn btn-ghost">Log In</a>
+      <details class="demo-dropdown pull-right">
+        <summary class="btn btn-primary">Book a Demo <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></summary>
+        <div class="demo-dropdown-panel">
+        <form class="demo-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Work email" required>
+          <input type="text" name="organization" placeholder="Organization" required>
+          <input type="text" name="country" placeholder="Country" required>
+          <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p class="demo-form-success">Thanks! We'll be in touch shortly.</p>
+      </div>
+      </details>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="#platform">Platform</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#references">References</a>
+    <a href="#use-cases">Use Cases</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://app.intaktis.com" target="_blank" rel="noopener">Log In</a>
+    <details class="demo-dropdown">
+      <summary class="btn btn-primary">Book a Demo <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></summary>
+      <div class="demo-dropdown-panel">
+        <form class="demo-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Work email" required>
+          <input type="text" name="organization" placeholder="Organization" required>
+          <input type="text" name="country" placeholder="Country" required>
+          <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p class="demo-form-success">Thanks! We'll be in touch shortly.</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+<div id="top"></div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="platform">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy reveal">
+      <div class="eyebrow">Infrastructure Operations Platform</div>
+      <h1>One source of truth for the infrastructure that keeps places moving.</h1>
+      <p class="lede">INTAKTIS brings GIS asset data, documentation, and day-to-day work together in one map-based system, so operators can see what they have, what has changed, and what needs attention.</p>
+      <div class="hero-actions">
+        <details class="demo-dropdown">
+          <summary class="btn btn-primary">Book a Demo <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></summary>
+          <div class="demo-dropdown-panel">
+        <form class="demo-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Work email" required>
+          <input type="text" name="organization" placeholder="Organization" required>
+          <input type="text" name="country" placeholder="Country" required>
+          <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p class="demo-form-success">Thanks! We'll be in touch shortly.</p>
+      </div>
+        </details>
+      </div>
+      <div class="hero-stat">
+        <strong>25,000+</strong>
+        <span>Infrastructure assets managed in INTAKTIS</span>
+      </div>
+    </div>
+
+    <div class="mockup-wrap reveal">
+      <div class="mockup reticle" style="overflow:hidden;"><span class="rt-tr"></span><span class="rt-bl"></span>
+        <img src="assets/images/hero-golf-asset-overview.webp" width="1600" height="688" loading="eager" alt="INTAKTIS platform showing a mapped golf course asset overview" style="display:block; width:100%; height:auto;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="section video-section">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow">Watch</div>
+      <h2>See INTAKTIS in action.</h2>
+      <p class="lede" style="margin:16px auto 0; text-align:center;">Watch a short screen recording to see how teams create mapped assets, attach information, and manage work in INTAKTIS.</p>
+    </div>
+    <div class="video-frame reveal" id="openVideoModal2" role="button" aria-label="Play video: INTAKTIS product sneak peek" style="background-image:url('assets/images/sneak-peek-poster.webp'); background-size:cover; background-position:center;">
+      <span class="geotag">INTAKTIS PRODUCT SNEAK PEEK</span>
+      <span class="geotag caption-tag">00:53</span>
+      <div class="video-play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE VALUE PROP ============ -->
+<section class="section" style="padding-top:88px; padding-bottom:88px;">
+  <div class="container">
+    <div class="value-copy reveal" style="max-width:760px;">
+      <div class="eyebrow">The Problem</div>
+      <h2>Infrastructure data should work as hard as the infrastructure itself.</h2>
+      <p style="margin-top:24px;">Large developments and infrastructure operators rely on GIS layers, drawings, PDFs, spreadsheets, photographs, videos and inspection records. When that information sits across separate systems, inboxes and individual devices, teams lose time finding what they need.</p>
+      <div class="sst-badge" style="margin-top:26px;">
+        <span>A Single Source of Truth</span>
+        <strong>INTAKTIS keeps mapped assets, documents and work records together in a shared system, so each team works from the same information.</strong>
+      </div>
+    </div>
+
+    <div class="diagram-card reveal">
+      <img src="assets/images/problem-data-flow-diagram.webp" width="1400" height="490" loading="lazy" alt="Diagram: without a shared system, teams search every source separately; with INTAKTIS, every team reads the same mapped-asset record." style="display:block; width:100%; height:auto; border-radius:4px;">
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM (CAPABILITIES + SHOWCASE) ============ -->
+<section class="section" id="platform-capabilities">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Platform</div>
+      <h2>Bring mapped assets, information, and operational work together.</h2>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-thumb"><img src="assets/images/capability-asset-network.webp" width="900" height="506" loading="lazy" alt="INTAKTIS screenshot: mapped asset network with irrigation, bunkers and tee boxes"></div>
+        <div class="feature-num">01 / Data Hub</div>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="13" y="3" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="3" y="13" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/><rect x="13" y="13" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.4"/></svg>
+        <h3>Create, import and organize mapped assets.</h3>
+        <p>Create, import, edit, and organize infrastructure assets as points, lines, and polygons across 2D and 3D maps. Calculate lengths and areas, add tags and color coding, and structure assets into clear hierarchies.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-thumb"><img src="assets/images/capability-video-attachment.webp" width="900" height="385" loading="lazy" alt="INTAKTIS screenshot: video attachment linked to a mapped asset"></div>
+        <div class="feature-num">02 / Any Data Type</div>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V9z" stroke="currentColor" stroke-width="1.4"/><path d="M14 3v6h6" stroke="currentColor" stroke-width="1.4"/><path d="M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.4"/></svg>
+        <h3>Attach supporting information to each asset.</h3>
+        <p>Attach photographs, videos, PDFs, websites, raster maps, and other information directly to the assets and locations they describe.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-thumb"><img src="assets/images/capability-maintenance-task.webp" width="900" height="387" loading="lazy" alt="INTAKTIS screenshot: creating a recurring maintenance task against an asset"></div>
+        <div class="feature-num">03 / Tasking</div>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.4"/></svg>
+        <h3>Assign, track and close out work in place.</h3>
+        <p>Create tasks against specific assets, assign responsibility, set deadlines, schedule recurring work, share progress updates, and attach supporting files as evidence of completion.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-thumb"><img src="assets/images/capability-photo-revisions.webp" width="900" height="388" loading="lazy" alt="INTAKTIS screenshot: asset detail panel with photo revisions over time"></div>
+        <div class="feature-num">04 / Asset History</div>
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M3.5 9A8.5 8.5 0 1112 20.5" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 9V4.5M3.5 9H8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <h3>Keep a structured operational history.</h3>
+        <p>Keep earlier file and map versions available for reference, compare changes over time, and build a structured operational history for each asset.</p>
+      </div>
+    </div>
+
+    <div class="roadmap-note reveal">
+      <div class="roadmap-tag">In Development</div>
+      <h4>Faster access to infrastructure information.</h4>
+      <p>INTAKTIS is testing advanced AI features that could help users search and interpret infrastructure information. Individual features will be described when their scope and availability are confirmed.</p>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:72px; margin-bottom:40px;">
+      <div class="eyebrow">Inside the Platform</div>
+      <h2>Operational information, connected to the assets it describes.</h2>
+    </div>
+
+    <div class="showcase-frame reticle reveal" style="position:relative; margin-top:64px; overflow:hidden;"><span class="rt-tr"></span><span class="rt-bl"></span>
+      <img src="assets/images/showcase-map-and-tasks.webp" width="1600" height="686" loading="lazy" alt="INTAKTIS platform showing mapped course assets alongside the Tasks panel" style="display:block; width:100%; height:auto;">
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how-it-works" style="padding-top:72px; padding-bottom:72px;">
+  <div class="container">
+    <div class="section-head reveal" style="margin-bottom:48px;">
+      <div class="eyebrow">How It Works</div>
+      <h2>From infrastructure data to day-to-day work.</h2>
+    </div>
+    <div class="hiw-steps reveal">
+      <div class="hiw-track"></div>
+      <svg class="hiw-arrow" style="left:33.3333%;" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8"/></svg>
+      <svg class="hiw-arrow" style="left:66.6667%;" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8"/></svg>
+
+      <div class="hiw-step">
+        <div class="hiw-node">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 15l6-6M11 6l1.5-1.5a3.5 3.5 0 015 5L16 11M13 18l-1.5 1.5a3.5 3.5 0 01-5-5L8 13" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="hiw-num">01</span>
+        </div>
+        <h3>Bring your infrastructure data together.</h3>
+        <p>Import or create mapped assets and add existing documents, imagery, technical information, and operational records.</p>
+      </div>
+
+      <div class="hiw-step">
+        <div class="hiw-node">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="hiw-num">02</span>
+        </div>
+        <h3>Create a single operational view.</h3>
+        <p>Structure assets into clear hierarchies and keep supporting information connected to the infrastructure it describes.</p>
+      </div>
+
+      <div class="hiw-step">
+        <div class="hiw-node">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span class="hiw-num">03</span>
+        </div>
+        <h3>Manage work against each asset.</h3>
+        <p>Create asset-linked tasks, assign responsibility, and retain progress updates and completion evidence in the same system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <div class="eyebrow">Pricing</div>
+      <h2>Choose the package that fits your operation.</h2>
+      <p class="lede" style="margin:16px auto 0; text-align:center;">INTAKTIS is available in Standard, Professional, and Enterprise packages. Contact us to discuss your assets, users, and implementation requirements.</p>
+    </div>
+
+    <div class="price-grid reveal">
+      <div class="price-card">
+        <div class="price-name">Standard</div>
+        <p class="price-desc">Single Source of Truth</p>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Up to 5,000 assets on INTAKTIS</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>100GB storage</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>10 seats</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Standard SLA</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Onboarding included</li>
+        </ul>
+      </div>
+
+      <div class="price-card featured">
+        <span class="price-featured-tag">Recommended</span>
+        <div class="price-name">Professional</div>
+        <p class="price-desc">Single Source of Truth + Tasking</p>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Up to 15,000 assets on INTAKTIS</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>500GB storage</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>50 seats</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Priority SLA</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Everything in Standard</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name">Enterprise</div>
+        <p class="price-desc">Single Source of Truth + Tasking + Customer Support</p>
+        <ul class="price-list">
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Custom asset cap on INTAKTIS</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Custom storage</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Unlimited seats</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Premium SLA + dedicated CSM</li>
+          <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2"/></svg>Custom deployment &amp; terms</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="price-note reveal" style="text-align:center; font-family:var(--font-mono); font-size:12.5px; color:var(--text-muted); margin:24px 0 0;">Packages are billed annually.</p>
+
+    <div class="price-cta-row reveal">
+      <button type="button" class="btn btn-ghost" data-open-sales>Contact Sales</button>
+      <details class="demo-dropdown">
+        <summary class="btn btn-primary">Book a Demo <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></summary>
+        <div class="demo-dropdown-panel">
+        <form class="demo-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Work email" required>
+          <input type="text" name="organization" placeholder="Organization" required>
+          <input type="text" name="country" placeholder="Country" required>
+          <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p class="demo-form-success">Thanks! We'll be in touch shortly.</p>
+      </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFERENCES ============ -->
+<section class="section" id="references">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">References</div>
+      <h2>Where INTAKTIS is already at work.</h2>
+      <p class="lede" style="margin-top:16px;">INTAKTIS is being validated through paid proof-of-concept projects in construction, master-planned community operations, and golf course maintenance. Each project tests the platform against a defined operational requirement.</p>
+    </div>
+
+    <!-- Ref 01: Tbilisi Hills Estate — master-planned community -->
+    <div class="ref-card reveal">
+      <div class="ref-visual photo-panel"><img src="assets/images/reference-tbilisi-hills-estate.webp" width="1400" height="1049" loading="lazy" alt="Aerial drone photo of Tbilisi Hills Estate, a master-planned residential community in Tbilisi, Georgia"><div class="ref-visual-bg"></div>
+        <span class="geotag">MASTER-PLANNED COMMUNITY · TBILISI, GEORGIA</span>
+      </div>
+      <div class="ref-body">
+        <div class="ref-cat">Master-Planned Community · Tbilisi, Georgia</div>
+        <h3>Tbilisi Hills Estate</h3>
+        <p class="ref-desc">Tbilisi Hills is a 331-hectare master-planned community combining residential development, an 18-hole golf course, and extensive supporting infrastructure.</p>
+        <div class="poc-label">The Purpose of the Proof of Concept</div>
+        <p class="ref-quote">"We want to use INTAKTIS for centralizing our day-to-day operational tasks, issues and resident requests in one shared platform, including task assignment, status, progress updates and photo evidence, to enable faster, more consistent resolution and reduce dependence on any one person's operational knowledge."</p>
+        <p class="ref-attribution"><strong>Ivan Roos</strong>, Construction Project Manager, Tbilisi Hills Golf and Residences</p>
+      </div>
+    </div>
+
+    <!-- Ref 02: Tbilisi Hills Golf -->
+    <div class="ref-card reveal">
+      <div class="ref-visual photo-panel"><img src="assets/images/reference-tbilisi-hills-golf.webp" width="1400" height="1049" loading="lazy" alt="Aerial drone photo of Tbilisi Hills Golf course operations in Tbilisi, Georgia"><div class="ref-visual-bg"></div>
+        <span class="geotag">GOLF COURSE OPERATIONS · TBILISI, GEORGIA</span>
+      </div>
+      <div class="ref-body">
+        <div class="ref-cat">Golf Course Operations · Tbilisi, Georgia</div>
+        <h3>Tbilisi Hills Golf</h3>
+        <p class="ref-desc">Tbilisi Hills Golf is Georgia's only professional 18-hole golf course, extending across 60 hectares within the wider Tbilisi Hills development.</p>
+        <div class="poc-label">The Purpose of the Proof of Concept</div>
+        <p class="ref-quote">"We want to use INTAKTIS for linking our maintenance tasks to specific course assets and locations, with status updates and photo evidence, to enable me and my team to view open and completed work, verify completion directly in the platform and maintain a basic maintenance history for each asset."</p>
+        <p class="ref-attribution"><strong>Paul Pohi (PGA)</strong>, Director of Golf, Tbilisi Hills Golf Management</p>
+      </div>
+    </div>
+
+    <!-- Ref 03: Shinwood -->
+    <div class="ref-card reveal">
+      <div class="ref-visual photo-panel"><img src="assets/images/reference-shinwood.webp" width="1400" height="1049" loading="lazy" alt="Aerial drone photo of the Shinwood residential development under construction in Saguramo, Georgia"><div class="ref-visual-bg"></div>
+        <span class="geotag">RESIDENTIAL DEVELOPMENT · CONSTRUCTION STAGE · SAGURAMO, GEORGIA</span>
+      </div>
+      <div class="ref-body">
+        <div class="ref-cat">Residential Development · Construction Stage · Saguramo, Georgia</div>
+        <h3>Shinwood</h3>
+        <p class="ref-desc">Shinwood is a 35-hectare residential development near Saguramo, with 289 ready-to-build plots and extensive supporting infrastructure.</p>
+        <div class="poc-label">The Purpose of the Proof of Concept</div>
+        <p class="ref-quote">"We want to use INTAKTIS for capturing our infrastructure as it is built in a single, map-based system, combining asset data, documentation and timestamped tracking of completed and outstanding work, to enable a complete and verifiable record ready for handover to our future operations team."</p>
+        <p class="ref-attribution"><strong>Nikoloz Kevkhishvili</strong>, Managing Partner, Rectus Development</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ USE CASES ============ -->
+<section class="section" id="use-cases">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Use Cases</div>
+      <h2>Built for how different teams operate.</h2>
+      <p class="lede" style="margin-top:16px;">Physical assets are spread across sites, while drawings, photographs, inspection records, and maintenance tasks often live in separate systems. INTAKTIS links that information to the relevant asset and location on the map.</p>
+    </div>
+
+    <div class="usecase-row reveal">
+      <div class="usecase-visual"><img src="assets/images/usecase-telecommunications.webp" width="1200" height="672" loading="lazy" alt="Field engineer inspecting telecommunications infrastructure near a cell tower"></div>
+      <div class="usecase-copy">
+        <div class="usecase-tag">Telecommunications</div>
+        <h3>Coordinate Work Across Dispersed Network Assets</h3>
+        <p>Bring towers, network assets, inspection records, and assigned work into one mapped view. Teams can record site findings, coordinate follow-up, and retain a history for each asset.</p>
+      </div>
+    </div>
+
+    <div class="usecase-row reverse reveal">
+      <div class="usecase-visual"><img src="assets/images/usecase-energy-utilities.webp" width="1200" height="655" loading="lazy" alt="Engineering team reviewing blueprints in front of an electrical transmission tower"></div>
+      <div class="usecase-copy">
+        <div class="usecase-tag">Energy and Utilities</div>
+        <h3>Connect Asset Records, Inspections and Maintenance</h3>
+        <p>Link field evidence and technical records to distributed infrastructure assets. Assign inspections and maintenance work from the same system.</p>
+      </div>
+    </div>
+
+    <div class="usecase-row reveal">
+      <div class="usecase-visual"><img src="assets/images/usecase-roads-transportation.webp" width="1200" height="673" loading="lazy" alt="Engineer inspecting a trench and underground pipe during a roads and transportation project"></div>
+      <div class="usecase-copy">
+        <div class="usecase-tag">Roads and Transportation</div>
+        <h3>Build a Clearer Record of Conditions and Repairs</h3>
+        <p>Map road assets and connect each location to condition records, photographs, and repair tasks. Teams can prioritize issues and retain a record of completed work.</p>
+      </div>
+    </div>
+
+    <div class="usecase-row reverse reveal">
+      <div class="usecase-visual"><img src="assets/images/usecase-golf-resort.webp" width="1200" height="1200" loading="lazy" alt="Aerial view of a golf course during golf and resort operations"></div>
+      <div class="usecase-copy">
+        <div class="usecase-tag">Golf and Resort Operations</div>
+        <h3>Coordinate Maintenance Across Complex Sites</h3>
+        <p>Link maintenance tasks, progress updates, and completion evidence to course, landscape, and facility assets. Managers can review open, overdue, and completed work by location.</p>
+      </div>
+    </div>
+
+    <div class="usecase-row reveal">
+      <div class="usecase-visual"><img src="assets/images/usecase-agriculture-irrigation.webp" width="1200" height="673" loading="lazy" alt="Irrigation pipe in an agricultural field"></div>
+      <div class="usecase-copy">
+        <div class="usecase-tag">Agriculture and Irrigation</div>
+        <h3>Connect Field Evidence to Irrigation Assets</h3>
+        <p>Map irrigation assets and keep field observations, photos, and maintenance tasks tied to the relevant location. Teams can record issues and coordinate follow-up across the site.</p>
+      </div>
+    </div>
+
+    <div class="usecase-row reverse reveal">
+      <div class="usecase-visual"><img src="assets/images/usecase-forestry-conservation.webp" width="1200" height="593" loading="lazy" alt="Aerial view of a forest and river for forestry and conservation monitoring"></div>
+      <div class="usecase-copy">
+        <div class="usecase-tag">Forestry and Conservation</div>
+        <h3>Maintain Location-Based Records Across Large Areas</h3>
+        <p>Map assets and areas of interest, then attach field observations, incident records, and supporting evidence. Updated records make it easier to review changes and coordinate work across large areas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">News</div>
+      <h2>Where INTAKTIS shows up.</h2>
+    </div>
+    <div class="news-grid reveal">
+<div class="news-card">
+        <div class="news-visual"><img src="assets/images/news-tbilisi-tech-weekend.webp" width="1000" height="667" loading="lazy" alt="INTAKTIS team presenting on a panel at Global Tech Weekend Tbilisi"></div>
+        <div class="news-body">
+          <div class="news-date">June 26, 2026</div>
+          <h3>INTAKTIS at Global Tech Weekend Tbilisi</h3>
+          <p>The INTAKTIS team had a booth at Global Tech Weekend Tbilisi 2026, which brought together more than 10,000 attendees.</p>
+          <div class="news-more">
+            <div class="news-more-inner">
+              <p>The team showcased the platform and explored how drone mapping and digital infrastructure management tools can support smarter decision-making and help build more resilient infrastructure.</p>
+            </div>
+          </div>
+          <button type="button" class="news-link">Continue Reading <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-visual"><img src="assets/images/news-web-summit-qatar.webp" width="1000" height="750" loading="lazy" alt="INTAKTIS on stage at Web Summit Qatar 2026"></div>
+        <div class="news-body">
+          <div class="news-date">February 11, 2026</div>
+          <h3>Innovation Through Connection: INTAKTIS at Web Summit Qatar 2026</h3>
+          <p>The INTAKTIS team participated in Web Summit Qatar 2026, a pivotal event that strengthened product development and market positioning and opened new avenues for collaboration.</p>
+          <div class="news-more">
+            <div class="news-more-inner">
+              <p>Over three days in Doha, we met with technology partners, enterprise operators, and founders across AI and next-generation digital infrastructure. These conversations gave us practical insight into real-world challenges, strengthened existing partnerships, and advanced several opportunities already underway.</p>
+              <p class="pull">Focused conversations. Clear alignment. A productive week.</p>
+              <p>The insights gained will directly shape the next phase of our product roadmap, with customer trials beginning in March, reinforcing our commitment to building resilient, future-ready infrastructure solutions.</p>
+            </div>
+          </div>
+          <button type="button" class="news-link">Continue Reading <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-visual"><img src="assets/images/news-poland-qatar-forum.webp" width="1000" height="750" loading="lazy" alt="INTAKTIS team at the Poland-Qatar Investment Forum"></div>
+        <div class="news-body">
+          <div class="news-date">November 26, 2025</div>
+          <h3>INTAKTIS at the Poland-Qatar Investment Forum</h3>
+          <p>Presented its product for the first time.</p>
+          <div class="news-more">
+            <div class="news-more-inner">
+              <p>INTAKTIS made its first public appearance at the Poland-Qatar Investment Forum, held on 24 November at the Andaz Doha by Hyatt hotel. The startup showcased its platform, which addresses long-standing challenges in infrastructure management, to an audience of investors and business leaders from both countries.</p>
+              <blockquote>"This was a great opportunity for us to get visibility among potential customers and investors in Qatar, as well as among the Polish business community there," said Julia Schwarz, CEO of the company and Co-Founder of Georgian drone solution provider December32. INTAKTIS Co-Founders CTO Mieszko Mularczyk and COO Robert Rak, also Co-Founders of drone software expert Apptimia, are from Poland.</blockquote>
+              <p>The team returned from Doha with new connections among investors and business leaders from both countries, and several conversations already underway for future collaboration.</p>
+            </div>
+          </div>
+          <button type="button" class="news-link">Continue Reading <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+      </div>
+    <div class="news-card">
+        <div class="news-visual"><img src="assets/images/news-keeping-infrastructure-intact.webp" width="1000" height="730" loading="lazy" alt="Tablet showing the INTAKTIS mapped asset interface"></div>
+        <div class="news-body">
+          <div class="news-date">October 20, 2025</div>
+          <h3>INTAKTIS: Keeping Infrastructure Intact</h3>
+          <p>Transforming infrastructure management with smart, integrated technology.</p>
+          <div class="news-more">
+            <div class="news-more-inner">
+              <p>From energy networks to transportation systems and public services, INTAKTIS is redefining how infrastructure is managed, monitored, and maintained.</p>
+              <p>INTAKTIS is a next-generation platform designed to modernize infrastructure operations, giving operators, engineers, and institutions a unified, map-focused interface to collaborate in real time. Teams can track assets, coordinate repairs, and increase transparency in public infrastructure management.</p>
+              <p>The platform combines GIS asset visualization, secure media and document storage, workflow coordination, and AI-driven insights into one connected system, helping teams turn field data into operational clarity, reduce downtime, and increase accountability.</p>
+              <p>More than software, INTAKTIS is laying the foundation for an integrated digital infrastructure ecosystem that links operators, agencies, and communities through shared data, smarter workflows, and a shared commitment to maintaining the infrastructure we all rely on.</p>
+            </div>
+          </div>
+          <button type="button" class="news-link">Continue Reading <svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></button>
+        </div>
+      </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common questions.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">What is INTAKTIS?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">INTAKTIS is an infrastructure operations platform that connects mapped assets, supporting information, and operational work in one accessible environment.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who is INTAKTIS designed for?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">INTAKTIS is designed for organizations that build, operate, or maintain complex physical infrastructure, including large developments, utilities, transportation networks, telecommunications operators, and other asset-intensive environments.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can INTAKTIS use our existing GIS and map data?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Existing GIS and map data can be imported after we review its format and quality. The preparation required depends on the source files and their complexity.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can INTAKTIS integrate with our existing systems?<span class="plus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Potential integrations are reviewed during project scoping. What is possible depends on the source system, data format, and required workflow.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="container">
+    <div class="eyebrow reveal">Get Started</div>
+    <h2 class="reveal">Make your infrastructure data work for you.</h2>
+    <p class="lede reveal">One platform. One source of truth. Better infrastructure operations.</p>
+    <div class="final-actions reveal">
+      <details class="demo-dropdown">
+        <summary class="btn btn-primary">Book a Demo <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8"/></svg></summary>
+        <div class="demo-dropdown-panel">
+        <form class="demo-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Work email" required>
+          <input type="text" name="organization" placeholder="Organization" required>
+          <input type="text" name="country" placeholder="Country" required>
+          <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p class="demo-form-success">Thanks! We'll be in touch shortly.</p>
+      </div>
+      </details>
+      <button type="button" class="btn btn-ghost" data-open-sales>Contact Sales</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <img src="assets/images/logo-mark.png" width="1724" height="429" loading="lazy" alt="INTAKTIS" class="logo-img">
+        </a>
+        <p>Map assets, connect documents, and manage infrastructure work in one platform.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="#platform">Platform</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#references">References</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:contact@intaktis.com">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <a href="mailto:contact@intaktis.com">contact@intaktis.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="copyright">© 2026 INTAKTIS. All rights reserved.</span>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/company/intaktis/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 7.03a1.96 1.96 0 100-3.92 1.96 1.96 0 000 3.92zM20.45 20h-3.37v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V20H9.68V8.5h3.24v1.57h.05c.45-.85 1.56-1.75 3.21-1.75 3.43 0 4.06 2.26 4.06 5.19V20z"/></svg></a>
+              </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ VIDEO MODAL ============ -->
+<div class="modal-overlay" id="videoModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal" aria-label="Close video">
+      <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+    <div class="modal-video-wrap" id="modalVideoWrap"></div>
+  </div>
+</div>
+
+<!-- ============ CONTACT SALES MODAL (guided questions) ============ -->
+<div class="modal-overlay" id="salesModal">
+  <div class="sales-box">
+    <button class="modal-close" id="closeSalesModal" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+
+    <div class="sales-step active" data-step="1">
+      <div class="sales-progress">Step 1 of 3</div>
+      <h3>What best describes you?</h3>
+      <div class="sales-options">
+        <button type="button" class="sales-opt">Infrastructure provider / utility</button>
+        <button type="button" class="sales-opt">Smart city / government</button>
+        <button type="button" class="sales-opt">Master-planned community</button>
+        <button type="button" class="sales-opt">Golf &amp; resort</button>
+        <button type="button" class="sales-opt">Other</button>
+      </div>
+    </div>
+
+    <div class="sales-step" data-step="2">
+      <div class="sales-progress">Step 2 of 3</div>
+      <h3>What's the scope of what you're managing?</h3>
+      <div class="sales-options">
+        <button type="button" class="sales-opt">A single site or facility</button>
+        <button type="button" class="sales-opt">Multiple sites within one organization</button>
+        <button type="button" class="sales-opt">A city, region, or network-wide system</button>
+        <button type="button" class="sales-opt">Still figuring that out</button>
+      </div>
+      <span class="sales-back">&larr; Back</span>
+    </div>
+
+    <div class="sales-step" data-step="3">
+      <div class="sales-progress">Step 3 of 3</div>
+      <h3>What's the main thing you'd want INTAKTIS to help with?</h3>
+      <div class="sales-options">
+        <button type="button" class="sales-opt">Centralizing scattered data</button>
+        <button type="button" class="sales-opt">Tasking &amp; maintenance workflows</button>
+        <button type="button" class="sales-opt">Interest in future advanced AI features</button>
+        <button type="button" class="sales-opt">Just exploring</button>
+      </div>
+      <span class="sales-back">&larr; Back</span>
+    </div>
+
+    <div class="sales-step" data-step="4">
+      <div class="sales-progress">Last step</div>
+      <h3>Tell us how to reach you</h3>
+      <form class="sales-form">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Work email" required>
+        <input type="text" name="organization" placeholder="Organization" required>
+        <input type="text" name="country" placeholder="Country" required>
+        <textarea class="sales-summary" name="details" rows="3"></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p class="sales-form-success">Thanks! Our sales team will be in touch shortly.</p>
+      <span class="sales-back">&larr; Back</span>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ---- Nav scroll state ----
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 12);
+}, { passive: true });
+
+// ---- Mobile menu ----
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navToggle.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}));
+
+// ---- Video modal ----
+const videoModal = document.getElementById('videoModal');
+const modalVideoWrap = document.getElementById('modalVideoWrap');
+const LOCAL_VIDEO_SRC = 'assets/videos/intaktis-sneak-peek.mp4';
+function openModal(e){
+  if(e) e.preventDefault();
+  modalVideoWrap.innerHTML = '<video src="' + LOCAL_VIDEO_SRC + '" controls autoplay playsinline></video>';
+  videoModal.classList.add('open');
+}
+function closeModalFn(){
+  videoModal.classList.remove('open');
+  modalVideoWrap.innerHTML = '';
+}
+['openVideoModal','openVideoModal2','openVideoModal3'].forEach(id=>{
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', openModal);
+});
+document.getElementById('closeModal').addEventListener('click', closeModalFn);
+videoModal.addEventListener('click', (e) => { if (e.target === videoModal) closeModalFn(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModalFn(); });
+
+// ---- FAQ accordion ----
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other => {
+      if (other !== item){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      }
+    });
+    item.classList.toggle('open', !isOpen);
+    a.style.maxHeight = !isOpen ? a.scrollHeight + 'px' : null;
+  });
+});
+
+// ---- News card expand/collapse ----
+document.querySelectorAll('.news-card').forEach(card => {
+  const link = card.querySelector('.news-link');
+  const more = card.querySelector('.news-more');
+  link.addEventListener('click', () => {
+    const isOpen = card.classList.contains('open');
+    card.classList.toggle('open', !isOpen);
+    more.style.maxHeight = !isOpen ? more.scrollHeight + 'px' : null;
+    link.childNodes[0].textContent = !isOpen ? 'Show Less ' : 'Continue Reading ';
+  });
+});
+
+// ---- Book a Demo — embedded form submit ----
+document.querySelectorAll('.demo-form').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    data.append('_subject', 'New Book a Demo request — INTAKTIS website');
+    data.append('_captcha', 'false');
+    data.append('_template', 'table');
+    fetch('https://formsubmit.co/ajax/contact@intaktis.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    }).catch(() => {});
+    form.classList.add('hide');
+    form.nextElementSibling.classList.add('show');
+  });
+});
+
+// ---- Contact Sales — guided questions modal ----
+const salesModal = document.getElementById('salesModal');
+const salesSteps = Array.from(document.querySelectorAll('.sales-step'));
+const salesAnswers = [];
+
+function showSalesStep(stepNumber){
+  salesSteps.forEach(step => {
+    step.classList.toggle('active', step.getAttribute('data-step') === String(stepNumber));
+  });
+}
+
+function resetSalesModal(){
+  salesAnswers.length = 0;
+  showSalesStep(1);
+  const form = salesModal.querySelector('.sales-form');
+  const success = salesModal.querySelector('.sales-form-success');
+  form.reset();
+  form.classList.remove('hide');
+  success.classList.remove('show');
+  salesModal.querySelector('.sales-summary').value = '';
+}
+
+document.querySelectorAll('[data-open-sales]').forEach(el => {
+  el.addEventListener('click', () => {
+    resetSalesModal();
+    salesModal.classList.add('open');
+  });
+});
+
+document.getElementById('closeSalesModal').addEventListener('click', () => {
+  salesModal.classList.remove('open');
+});
+salesModal.addEventListener('click', (e) => { if (e.target === salesModal) salesModal.classList.remove('open'); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && salesModal.classList.contains('open')) salesModal.classList.remove('open'); });
+
+salesSteps.forEach(step => {
+  const stepNumber = parseInt(step.getAttribute('data-step'), 10);
+  step.querySelectorAll('.sales-opt').forEach(opt => {
+    opt.addEventListener('click', () => {
+      salesAnswers[stepNumber - 1] = opt.textContent;
+      if (stepNumber < 4){
+        showSalesStep(stepNumber + 1);
+      }
+      if (stepNumber === 3){
+        salesModal.querySelector('.sales-summary').value = salesAnswers.filter(Boolean).join(' \u00b7 ');
+      }
+    });
+  });
+  const back = step.querySelector('.sales-back');
+  if (back){
+    back.addEventListener('click', () => showSalesStep(stepNumber - 1));
+  }
+});
+
+document.querySelectorAll('.sales-form').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    data.append('_subject', 'New Contact Sales inquiry — INTAKTIS website');
+    data.append('_captcha', 'false');
+    data.append('_template', 'table');
+    fetch('https://formsubmit.co/ajax/contact@intaktis.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    }).catch(() => {});
+    form.classList.add('hide');
+    form.nextElementSibling.classList.add('show');
+  });
+});
+
+// ---- Scroll reveal ----
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+
+// ---- Smooth-scroll offset for sticky nav ----
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (target){
+      e.preventDefault();
+      const y = target.getBoundingClientRect().top + window.scrollY - 76;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
